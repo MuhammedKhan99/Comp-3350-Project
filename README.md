@@ -12,9 +12,6 @@ enjoyable as possible.
 To run the project on the AndroidStudio emulator, first clone the repository 
 into the directory of your choice:
 
-```bash
-git clone https://code.cs.umanitoba.ca/comp3350-winter2020/virtual-sticky-notes-11.git
-```
 
 Then open AndroidStudio and go to ```File -> Open```. Then go to 
 virtual-sticky-notes-11/VirtualStickyNotes and open up the VirtualStickyNotes project.
