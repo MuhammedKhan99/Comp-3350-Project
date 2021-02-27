@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:contextClickable="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.skydoves.colorpickerpreference.ColorPickerView
+        android:id="@+id/colorPickerView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:palette="@drawable/palette"
+        app:selector="@drawable/wheel" />
+
+
+    <ImageView
+        android:id="@+id/noteSquare"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:background="@drawable/note_image"
+        android:foreground="@drawable/note_image"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        style="@style/NegativeButtonStyle"
+        android:id="@+id/cancelButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/noteSquare"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/noteSquare"
+        app:layout_constraintTop_toBottomOf="@+id/noteSquare"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        style="@style/DefaultButtonStyle"
+        android:id="@+id/submitButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/noteSquare"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/noteSquare"
+        app:layout_constraintTop_toBottomOf="@+id/noteSquare"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:ellipsize="none"
+        android:inputType="textMultiLine"
+        android:maxLines="13"
+        android:scrollHorizontally="false"
+        android:textIsSelectable="true"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/noteSquare"
+        app:layout_constraintStart_toStartOf="@+id/noteSquare"
+        app:layout_constraintTop_toTopOf="@+id/noteSquare" />
+
+    <TextView
+        android:id="@+id/erorrReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/noteSquare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorPickerView"
+        app:layout_constraintVertical_bias="0.882" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

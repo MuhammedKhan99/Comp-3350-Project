@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/board_settings_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/boardTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Board Settings"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <com.skydoves.colorpickerpreference.ColorPickerView
+        android:id="@+id/colorPickerView_Board"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardTitleLabel"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:palette="@drawable/palette"
+        app:selector="@drawable/wheel" />
+
+    <EditText
+        android:id="@+id/boardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorPickerView_Board" />
+
+    <Button
+        android:id="@+id/boardDeletebutton"
+        style="@style/DefaultButtonStyle"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onDeleteButtonPressed"
+        android:text="Delete Board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardDeleteNotes" />
+
+    <Button
+        android:id="@+id/boardDeleteNotes"
+        style="@style/DefaultButtonStyle"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onNotesDeleteButton"
+        android:text="Delete All Notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardTitle" />
+
+    <Button
+        style="@style/DefaultButtonStyle"
+        android:id="@+id/AcceptChangesbutton_BoardEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:onClick="onSubmitPressed"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardDeletebutton" />
+
+    <Button
+        style="@style/NegativeButtonStyle"
+        android:id="@+id/cancelButton_BoardEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:onClick="onCancelButtonPressed"
+        android:text="@android:string/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/AcceptChangesbutton_BoardEdit"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardDeletebutton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
